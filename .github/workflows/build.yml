@@ -1,4 +1,4 @@
-name: Build CFtester
+name: Build iptest
 
 on:
   push:
@@ -121,6 +121,8 @@ jobs:
         if: inputs.release
         uses: actions/create-release@main
         with:
+          tag_name: 'v1.0.0'
+          release_name: 'Release v1.0.0'
           files: |
             bin/*
         env:
